@@ -20,14 +20,8 @@ Ninewells Hospital, Dundee
 ---
 
 ## How to Publish on GitHub Pages
-
-1. **Create a new GitHub repository** (e.g. `hmfus-scotland`)
-2. **Upload all files** — keep the folder structure intact (all files + `images/` folder at the root level)
-3. Go to **Settings → Pages**
-4. Under *Source*, select **"Deploy from a branch"**
-5. Choose **`main`** branch and **`/ (root)`** folder
-6. Click **Save**
-7. Your site will be live at:  
+1. **Upload all files** — keep the folder structure intact (all files + `images/` folder at the root level)
+2. Your site will be live at:  
    `https://YOUR-USERNAME.github.io/hmfus-scotland/`
 
 ---
