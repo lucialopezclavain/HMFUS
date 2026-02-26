@@ -6,20 +6,23 @@
   <title>Hydatidiform Mole Follow-Up Service (HMFUS) – NHS Scotland</title>
   <link rel="stylesheet" href="style.css">
   <style>
-    /* ── HOME PAGE STICKY PANEL LAYOUT ── */
+    /* ── Lock the page so only the right panel scrolls ── */
+    html, body { height: 100%; overflow: hidden; }
+
+    /* The header+nav sit above; everything below is the two-column layout */
+    #nhs-header-placeholder { flex-shrink: 0; }
+
+    /* Outer wrapper fills remaining viewport height */
     .home-layout {
       display: flex;
-      align-items: flex-start;
-      min-height: calc(100vh - 120px); /* below header+nav */
+      height: calc(100vh - 112px); /* 112px = approx header+nav height */
     }
 
-    /* Sticky left panel */
+    /* ── STICKY LEFT PANEL ── */
     .home-sticky-panel {
-      position: sticky;
-      top: 0;
       width: 360px;
       flex-shrink: 0;
-      height: 100vh;
+      height: 100%;
       overflow-y: auto;
       background: var(--nhs-blue);
       color: white;
@@ -39,7 +42,6 @@
       padding: 10px 14px;
       border-radius: 4px;
     }
-
     .sticky-title h1 {
       font-size: 20px;
       font-weight: 700;
@@ -51,15 +53,12 @@
       opacity: 0.88;
       line-height: 1.5;
     }
-
     .sticky-divider {
       border: none;
       border-top: 1px solid rgba(255,255,255,0.25);
       margin: 0;
     }
-
-    /* Service cards in sidebar */
-    .sticky-services h3 {
+    .sticky-services h3, .sticky-audience h3 {
       font-size: 12px;
       text-transform: uppercase;
       letter-spacing: 0.08em;
@@ -73,33 +72,11 @@
       gap: 10px;
       margin-bottom: 12px;
     }
-    .sticky-service-item .icon {
-      font-size: 18px;
-      flex-shrink: 0;
-      margin-top: 1px;
-    }
-    .sticky-service-item .text {
-      font-size: 13px;
-      line-height: 1.4;
-    }
-    .sticky-service-item .text strong {
-      display: block;
-      font-weight: 700;
-      margin-bottom: 1px;
-    }
-    .sticky-service-item .text span {
-      opacity: 0.8;
-    }
+    .sticky-service-item .icon { font-size: 18px; flex-shrink: 0; margin-top: 1px; }
+    .sticky-service-item .text { font-size: 13px; line-height: 1.4; }
+    .sticky-service-item .text strong { display: block; font-weight: 700; margin-bottom: 1px; }
+    .sticky-service-item .text span { opacity: 0.8; }
 
-    /* Audience nav links in sidebar */
-    .sticky-audience h3 {
-      font-size: 12px;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      opacity: 0.7;
-      margin-bottom: 12px;
-      font-weight: 700;
-    }
     .sticky-audience-link {
       display: block;
       background: rgba(255,255,255,0.12);
@@ -111,28 +88,11 @@
       margin-bottom: 10px;
       transition: background 0.15s;
     }
-    .sticky-audience-link:hover {
-      background: rgba(255,255,255,0.22);
-    }
-    .sticky-audience-link .link-title {
-      font-weight: 700;
-      font-size: 14px;
-      display: block;
-      margin-bottom: 3px;
-    }
-    .sticky-audience-link .link-desc {
-      font-size: 12px;
-      opacity: 0.8;
-      display: block;
-    }
-    .sticky-audience-link .link-arrow {
-      float: right;
-      font-size: 18px;
-      margin-top: -18px;
-      opacity: 0.7;
-    }
+    .sticky-audience-link:hover { background: rgba(255,255,255,0.22); }
+    .sticky-audience-link .link-title { font-weight: 700; font-size: 14px; display: block; margin-bottom: 3px; }
+    .sticky-audience-link .link-desc { font-size: 12px; opacity: 0.8; display: block; }
+    .sticky-audience-link .link-arrow { float: right; font-size: 18px; margin-top: -18px; opacity: 0.7; }
 
-    /* Quick contact strip at bottom of sidebar */
     .sticky-contact {
       margin-top: auto;
       background: rgba(0,0,0,0.2);
@@ -145,10 +105,12 @@
     .sticky-contact a:hover { text-decoration: underline; }
     .sticky-contact .contact-row { margin-bottom: 6px; }
 
-    /* Scrollable right content */
+    /* ── SCROLLABLE RIGHT CONTENT ── */
     .home-scroll-content {
       flex: 1;
       min-width: 0;
+      height: 100%;
+      overflow-y: auto;
       padding: 40px 40px 64px;
     }
     .home-scroll-content h2 {
@@ -162,16 +124,12 @@
     .home-scroll-content h2:first-child { margin-top: 0; }
     .home-scroll-content p { margin-bottom: 16px; line-height: 1.65; }
 
-    /* Mobile: stack vertically */
+    /* Mobile: stack vertically, restore normal scroll */
     @media (max-width: 860px) {
-      .home-layout { flex-direction: column; }
-      .home-sticky-panel {
-        position: relative;
-        width: 100%;
-        height: auto;
-        min-height: unset;
-      }
-      .home-scroll-content { padding: 24px 20px 48px; }
+      html, body { height: auto; overflow: auto; }
+      .home-layout { flex-direction: column; height: auto; }
+      .home-sticky-panel { width: 100%; height: auto; }
+      .home-scroll-content { height: auto; overflow: visible; padding: 24px 20px 48px; }
     }
   </style>
 </head>
@@ -292,14 +250,4 @@
 
     <div class="nhs-callout">
       <h4>Receiving samples from across Scotland</h4>
-      <p>If women in Scotland are suspected of having a molar pregnancy, samples are sent to the HMFUS for expert opinion and diagnosis. If confirmed, these women are offered enrolment in our follow-up programme.</p>
-    </div>
-
-  </main>
-
-</div><!-- /home-layout -->
-
-<div id="nhs-footer-placeholder"></div>
-<script src="components.js"></script>
-</body>
-</html>
+      <p>If women in Scotland are suspected of having a molar pregnancy, samples are sent to the HMFUS for expert opinion and diagnosis. If confirmed, these women are offered enrolment in our follow-up programme.</
