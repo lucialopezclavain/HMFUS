@@ -10,40 +10,71 @@
     html, body { height: auto; overflow: auto; }
 
     /* ── FIXED HERO BANNER ── */
-    .home-hero {
-      position: fixed;
-      top: 112px;
-      left: 0;
-      right: 0;
-      z-index: 200;
-      background: var(--nhs-blue);
-      color: white;
-      padding: 14px 32px;
-      display: flex;
-      align-items: center;
-      gap: 20px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.3);
-    }
-    .home-hero__logo img {
-      height: 52px;
-      background: white;
-      padding: 6px 10px;
-      border-radius: 4px;
-    }
-    .home-hero__text h1 { font-size: 18px; font-weight: 700; line-height: 1.2; margin-bottom: 2px; }
-    .home-hero__text p { font-size: 13px; opacity: 0.85; margin: 0; }
-    .home-hero__contact {
-      margin-left: auto;
-      text-align: right;
-      font-size: 13px;
-      opacity: 0.9;
-      white-space: nowrap;
-    }
-    .home-hero__contact a { color: white; text-decoration: none; }
-    .home-hero__contact a:hover { text-decoration: underline; }
+.home-hero {
+  position: fixed;
+  top: 112px;
+  left: 0;
+  right: 0;
+  z-index: 200;
+  background: var(--nhs-blue);
+  color: #fff;
+  padding: 14px 32px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
 
-    /* Spacer below both fixed bars */
-    .home-hero-spacer { height: 192px; }
+.home-hero__logo img {
+  height: 52px;
+  background: #fff;
+  padding: 6px 10px;
+  border-radius: 4px;
+}
+
+.home-hero__text h1 {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 2px;
+}
+
+.home-hero__text p {
+  font-size: 13px;
+  opacity: 0.85;
+  margin: 0;
+}
+
+.home-hero__contact {
+  margin-left: auto;
+  text-align: right;
+  font-size: 13px;
+  opacity: 0.9;
+  white-space: nowrap;
+}
+
+.home-hero__contact a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.home-hero__contact a:hover {
+  text-decoration: underline;
+}
+
+/* Spacer below both fixed bars */
+.home-hero-spacer {
+  height: 192px;
+}
+
+/* ── MAIN LAYOUT ── */
+.home-body {
+  display: flex;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px 64px 8px;
+}
 
     /* ── MAIN LAYOUT ── */
     .home-body {
