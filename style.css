@@ -204,7 +204,7 @@ body {
 .nhs-main {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 40px 24px 64px;
+  padding: 40px 16px 64px 0;
 }
 .nhs-main--two-col {
   display: grid;
