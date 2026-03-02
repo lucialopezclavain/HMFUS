@@ -21,8 +21,8 @@ Ninewells Hospital, Dundee
 
 ## How to Publish on GitHub Pages
 1. **Upload all files** — keep the folder structure intact (all files + `images/` folder at the root level)
-2. Your site will be live at:  
-   `https://YOUR-USERNAME.github.io/hmfus-scotland/`
+2. Our site will be live at:  
+   https://lucialopezclavain.github.io/HMFUS/index.html
 
 ---
 
