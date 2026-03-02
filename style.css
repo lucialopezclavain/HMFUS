@@ -1,0 +1,491 @@
+/* NHS-style design for HMFUS */
+:root {
+  --nhs-blue: #005eb8;
+  --nhs-dark-blue: #003087;
+  --nhs-mid-blue: #0072ce;
+  --nhs-light-blue: #d8e8f0;
+  --nhs-green: #007f3b;
+  --nhs-white: #ffffff;
+  --nhs-pale-grey: #f0f4f5;
+  --nhs-mid-grey: #aeb7bd;
+  --nhs-dark-grey: #425563;
+  --nhs-black: #212b32;
+  --font: 'Frutiger', 'Arial', sans-serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: var(--font);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--nhs-black);
+  background: var(--nhs-white);
+  padding-top: 124px; /* clears fixed hero banner + nav */
+}
+
+/* ── FIXED HEADER WRAPPER (all pages) ── */
+#nhs-header-placeholder {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+/* ── HERO BANNER (shared across all pages) ── */
+.nhs-hero-banner {
+  background: var(--nhs-blue);
+  color: white;
+}
+.nhs-hero-banner__inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.nhs-hero-banner__logo img {
+  height: 52px;
+  background: white;
+  padding: 6px 10px;
+  border-radius: 4px;
+}
+.nhs-hero-banner__title {
+  display: block;
+  font-size: 18px;
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+  line-height: 1.2;
+  margin-bottom: 3px;
+}
+.nhs-hero-banner__title:hover { text-decoration: underline; }
+.nhs-hero-banner__text p {
+  font-size: 13px;
+  opacity: 0.85;
+  margin: 0;
+}
+.nhs-hero-banner__contact {
+  margin-left: auto;
+  text-align: right;
+  font-size: 13px;
+  opacity: 0.9;
+  white-space: nowrap;
+}
+.nhs-hero-banner__contact a { color: white; text-decoration: none; }
+.nhs-hero-banner__contact a:hover { text-decoration: underline; }
+.nhs-hero-banner__logo-right img {
+  height: 60px;
+  width: auto;
+  margin-left: 16px;
+}
+
+/* ── NAV ── */
+.nhs-nav {
+  background: var(--nhs-dark-blue);
+}
+.nhs-nav__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+}
+.nhs-nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 12px 16px;
+  display: inline-block;
+  border-bottom: 4px solid transparent;
+  transition: background 0.15s, border-color 0.15s;
+}
+.nhs-nav a:hover {
+  background: rgba(255,255,255,0.1);
+  border-bottom-color: rgba(255,255,255,0.5);
+}
+.nhs-nav a.active {
+  background: rgba(255,255,255,0.15);
+  border-bottom-color: white;
+}
+
+/* Sub-nav for inner pages */
+.nhs-subnav {
+  background: var(--nhs-light-blue);
+  border-bottom: 2px solid var(--nhs-blue);
+}
+/* Pages with a subnav need extra padding to clear it (~44px subnav height) */
+.nhs-subnav + .nhs-breadcrumb,
+.nhs-subnav ~ .nhs-breadcrumb {
+  margin-top: 44px;
+}
+.nhs-subnav__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.nhs-subnav a {
+  color: var(--nhs-dark-blue);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 10px 14px;
+  display: inline-block;
+  border-bottom: 3px solid transparent;
+}
+.nhs-subnav a:hover { border-bottom-color: var(--nhs-blue); }
+.nhs-subnav a.active { border-bottom-color: var(--nhs-blue); color: var(--nhs-blue); }
+
+/* ── HERO BANNER ── */
+.nhs-hero {
+  background: var(--nhs-blue);
+  color: white;
+  padding: 48px 24px;
+}
+.nhs-hero__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 32px;
+  align-items: center;
+}
+.nhs-hero h1 {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 12px;
+}
+.nhs-hero p {
+  font-size: 18px;
+  opacity: 0.9;
+  max-width: 600px;
+}
+.nhs-hero__logo-box img {
+  max-width: 240px;
+  background: white;
+  padding: 12px;
+  border-radius: 4px;
+}
+
+/* ── PAGE CONTENT ── */
+.nhs-page-header {
+  background: var(--nhs-pale-grey);
+  border-bottom: 4px solid var(--nhs-blue);
+  padding: 32px 24px;
+}
+.nhs-page-header__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.nhs-page-header h1 {
+  font-size: 32px;
+  color: var(--nhs-dark-blue);
+  font-weight: 700;
+}
+
+.nhs-breadcrumb {
+  background: var(--nhs-white);
+  border-bottom: 1px solid #d8d8d8;
+  padding: 8px 24px;
+  font-size: 14px;
+}
+.nhs-breadcrumb__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.nhs-breadcrumb a { color: var(--nhs-blue); text-decoration: none; }
+.nhs-breadcrumb a:hover { text-decoration: underline; }
+.nhs-breadcrumb span { color: var(--nhs-dark-grey); margin: 0 6px; }
+
+/* ── MAIN LAYOUT ── */
+.nhs-main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 16px 64px 0;
+}
+.nhs-main--two-col {
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  gap: 40px;
+}
+.nhs-sidebar {
+  position: sticky;
+  top: 24px;
+  align-self: start;
+}
+
+/* ── CONTENT ELEMENTS ── */
+.nhs-main h2 {
+  font-size: 24px;
+  color: var(--nhs-dark-blue);
+  font-weight: 700;
+  margin: 32px 0 12px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--nhs-light-blue);
+}
+.nhs-main h3 {
+  font-size: 20px;
+  color: var(--nhs-dark-blue);
+  font-weight: 700;
+  margin: 24px 0 10px;
+}
+.nhs-main h4 {
+  font-size: 17px;
+  font-weight: 700;
+  margin: 20px 0 8px;
+}
+.nhs-main p { margin-bottom: 16px; }
+.nhs-main ul, .nhs-main ol {
+  margin: 0 0 16px 24px;
+}
+.nhs-main li { margin-bottom: 6px; }
+
+/* ── CARDS ── */
+.nhs-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+  margin: 24px 0;
+}
+.nhs-card {
+  background: var(--nhs-white);
+  border: 1px solid #d8d8d8;
+  border-top: 4px solid var(--nhs-blue);
+  padding: 24px;
+  border-radius: 0 0 4px 4px;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  transition: box-shadow 0.2s;
+}
+.nhs-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.12); }
+.nhs-card h3 {
+  color: var(--nhs-blue);
+  font-size: 18px;
+  margin: 0 0 10px;
+  border: none;
+  padding: 0;
+}
+.nhs-card p { font-size: 14px; margin: 0; color: var(--nhs-dark-grey); }
+.nhs-card .nhs-card__arrow {
+  display: inline-block;
+  margin-top: 12px;
+  color: var(--nhs-blue);
+  font-weight: 700;
+  font-size: 14px;
+}
+.nhs-card__icon {
+  width: 40px;
+  height: 40px;
+  background: var(--nhs-light-blue);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  font-size: 20px;
+}
+
+/* ── CALLOUT BOXES ── */
+.nhs-callout {
+  background: var(--nhs-pale-grey);
+  border-left: 4px solid var(--nhs-blue);
+  padding: 20px 24px;
+  margin: 24px 0;
+  border-radius: 0 4px 4px 0;
+}
+.nhs-callout--green { border-left-color: var(--nhs-green); }
+.nhs-callout--yellow { border-left-color: #ffb81c; }
+.nhs-callout h4 { margin: 0 0 8px; color: var(--nhs-dark-blue); }
+.nhs-callout p { margin: 0; font-size: 15px; }
+
+/* ── INFO STRIP ── */
+.nhs-info-strip {
+  background: var(--nhs-light-blue);
+  padding: 20px 24px;
+  margin: 24px 0;
+  border-radius: 4px;
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.nhs-info-strip__item {
+  font-size: 14px;
+}
+.nhs-info-strip__item strong { display: block; color: var(--nhs-dark-blue); }
+
+/* ── TABLE ── */
+.nhs-table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 15px; }
+.nhs-table th {
+  background: var(--nhs-blue);
+  color: white;
+  text-align: left;
+  padding: 10px 14px;
+  font-weight: 600;
+}
+.nhs-table td { padding: 10px 14px; border-bottom: 1px solid #d8d8d8; }
+.nhs-table tr:nth-child(even) td { background: var(--nhs-pale-grey); }
+
+/* ── IMAGES ── */
+.nhs-image-block {
+  margin: 24px 0;
+  text-align: center;
+}
+.nhs-image-block img {
+  max-width: 100%;
+  border: 1px solid #d8d8d8;
+  border-radius: 4px;
+}
+.nhs-image-block figcaption {
+  font-size: 13px;
+  color: var(--nhs-dark-grey);
+  margin-top: 8px;
+  font-style: italic;
+}
+.nhs-image-row {
+  display: flex;
+  gap: 16px;
+  margin: 24px 0;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.nhs-image-row figure {
+  flex: 1;
+  min-width: 220px;
+  max-width: 320px;
+  text-align: center;
+}
+.nhs-image-row img {
+  width: 100%;
+  border: 1px solid #d8d8d8;
+  border-radius: 4px;
+}
+.nhs-image-row figcaption { font-size: 13px; color: var(--nhs-dark-grey); font-style: italic; margin-top: 6px; }
+
+/* ── SIDEBAR WIDGETS ── */
+.nhs-sidebar-box {
+  background: var(--nhs-pale-grey);
+  border: 1px solid #d8d8d8;
+  border-top: 4px solid var(--nhs-blue);
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 0 0 4px 4px;
+}
+.nhs-sidebar-box h3 {
+  font-size: 16px;
+  color: var(--nhs-dark-blue);
+  margin: 0 0 12px;
+  border: none;
+  padding: 0;
+}
+.nhs-sidebar-box ul { margin: 0; padding-left: 18px; }
+.nhs-sidebar-box li { font-size: 14px; margin-bottom: 8px; }
+.nhs-sidebar-box a { color: var(--nhs-blue); text-decoration: none; }
+.nhs-sidebar-box a:hover { text-decoration: underline; }
+.nhs-sidebar-box p { font-size: 14px; margin-bottom: 8px; }
+.nhs-sidebar-box strong { color: var(--nhs-dark-blue); }
+
+/* ── FAQ ACCORDION ── */
+.nhs-faq { margin: 16px 0; }
+.nhs-faq details {
+  border: 1px solid #d8d8d8;
+  border-radius: 4px;
+  margin-bottom: 8px;
+  overflow: hidden;
+}
+.nhs-faq summary {
+  background: var(--nhs-pale-grey);
+  padding: 14px 20px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 15px;
+  color: var(--nhs-dark-blue);
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nhs-faq summary::after { content: '+'; font-size: 20px; color: var(--nhs-blue); }
+.nhs-faq details[open] summary::after { content: '−'; }
+.nhs-faq summary:hover { background: var(--nhs-light-blue); }
+.nhs-faq .faq-answer { padding: 16px 20px; font-size: 15px; }
+.nhs-faq .faq-answer p { margin-bottom: 10px; }
+.nhs-faq .faq-answer ul { padding-left: 20px; }
+
+/* ── PAGE-ON-PAGE NAV ── */
+.nhs-contents {
+  background: var(--nhs-pale-grey);
+  border: 1px solid #d8d8d8;
+  padding: 20px 24px;
+  margin-bottom: 32px;
+  border-radius: 4px;
+  display: inline-block;
+  min-width: 280px;
+}
+.nhs-contents h2 { font-size: 16px; margin: 0 0 10px; border: none; padding: 0; }
+.nhs-contents ol { padding-left: 20px; margin: 0; }
+.nhs-contents li { font-size: 14px; margin-bottom: 5px; }
+.nhs-contents a { color: var(--nhs-blue); text-decoration: none; }
+.nhs-contents a:hover { text-decoration: underline; }
+
+/* ── FOOTER ── */
+.nhs-footer {
+  background: var(--nhs-dark-blue);
+  color: white;
+  padding: 40px 24px 24px;
+  margin-top: 0;
+}
+.nhs-footer__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 32px;
+  margin-bottom: 32px;
+}
+.nhs-footer h4 { font-size: 14px; text-transform: uppercase; letter-spacing: 0.05em; opacity: 0.7; margin-bottom: 12px; }
+.nhs-footer p { font-size: 14px; opacity: 0.85; line-height: 1.6; margin-bottom: 6px; }
+.nhs-footer a { color: white; font-size: 14px; text-decoration: none; opacity: 0.85; display: block; margin-bottom: 6px; }
+.nhs-footer a:hover { opacity: 1; text-decoration: underline; }
+.nhs-footer__bottom {
+  border-top: 1px solid rgba(255,255,255,0.2);
+  padding-top: 16px;
+  font-size: 13px;
+  opacity: 0.6;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ── TAGS ── */
+.nhs-tag {
+  display: inline-block;
+  background: var(--nhs-blue);
+  color: white;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 2px 10px;
+  border-radius: 2px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-right: 8px;
+}
+.nhs-tag--green { background: var(--nhs-green); }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+  .nhs-hero__inner { grid-template-columns: 1fr; }
+  .nhs-hero__logo-box { display: none; }
+  .nhs-main--two-col { grid-template-columns: 1fr; }
+  .nhs-sidebar { position: static; }
+  .nhs-hero h1 { font-size: 26px; }
+  .nhs-header__inner { flex-direction: column; align-items: flex-start; }
+  .nhs-header__contact { text-align: left; }
+}
