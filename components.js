@@ -14,7 +14,6 @@ function getNHSHeader(activePage) {
       { href: 'patients.html#counselling',     label: 'Counselling' },
       { href: 'patients.html#links',           label: 'Helpful Links' },
       { href: 'patients.html#faqs',            label: 'FAQs' },
-      { href: 'patients.html#contact-section', label: 'Contact' },
     ],
     'professionals.html': [
       { href: 'professionals.html#pathology',   label: 'Pathology Referral' },
@@ -99,7 +98,7 @@ function getNHSFooter() {
       </div>
       <div>
         <h4>Service Hours</h4>
-        <p>Monday – Friday<br>8:00am – 5:00pm</p>
+        <p>Monday – Friday<br>9:00am – 4:00pm</p>
         <p>Closed on public holidays.</p>
       </div>
     </div>
