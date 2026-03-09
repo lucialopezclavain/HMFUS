@@ -92,7 +92,7 @@ function getNHSFooter() {
       <div>
         <h4>Related Services</h4>
         <a href="https://www.nhsinform.scot/illnesses-and-conditions/pregnancy-and-childbirth/losing-a-baby/molar-pregnancy/" target="_blank">NHS Inform</a>
-        <a href="https://www.nhs.uk/conditions/molar-pregnancy/" target="_blank">NHS.uk</a>
+        <a href="https://www.nhs.uk/conditions/molar-pregnancy/" target="_blank">NHS.UK</a>
         <a href="https://www.macmillan.org.uk/" target="_blank">Macmillan Cancer Support</a>
         <a href="https://mymolarpregnancy.com/" target="_blank">MyMolarPregnancy.com</a>
       </div>
