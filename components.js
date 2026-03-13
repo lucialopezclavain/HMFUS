@@ -16,8 +16,8 @@ function getNHSHeader(activePage) {
       { href: 'patients.html#faqs',            label: 'FAQs' },
     ],
     'professionals.html': [
-      { href: 'professionals.html#pathology',   label: 'Pathology Referral' },
-      { href: 'professionals.html#diagnosis',   label: 'Diagnosis' },
+      { href: 'professionals.html#background',   label: 'Background' },
+      { href: 'professionals.html#pathology',   label: 'Pathology Referral and Diagnosis' },
       { href: 'professionals.html#registration',label: 'Patient Registration' },
       { href: 'professionals.html#hcg',         label: 'hCG Follow-up Surveillance' },
       { href: 'professionals.html#chemo',       label: 'Chemotherapy' },
