@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Information for Patients – HMFUS Scotland</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .patients-layout {
+      display: flex;
+      align-items: flex-start;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 12px 64px 0;
+    }
+    .patients-sidenav {
+      width: 210px;
+      flex-shrink: 0;
+      position: sticky;
+      top: 140px;
+      align-self: flex-start;
+      padding: 20px 0 20px;
+    }
+    .patients-sidenav__label {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--nhs-dark-grey);
+      padding: 0 16px 10px;
+      border-bottom: 2px solid var(--nhs-light-blue);
+      margin-bottom: 8px;
+    }
+    .patients-sidenav a {
+      display: block;
+      padding: 9px 16px;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--nhs-dark-grey);
+      text-decoration: none;
+      border-left: 3px solid transparent;
+      transition: all 0.15s;
+      line-height: 1.3;
+    }
+    .patients-sidenav a:hover {
+      color: var(--nhs-blue);
+      background: var(--nhs-pale-grey);
+      border-left-color: var(--nhs-light-blue);
+    }
+    .patients-sidenav a.active {
+      color: var(--nhs-blue);
+      font-weight: 700;
+      border-left-color: var(--nhs-blue);
+      background: var(--nhs-light-blue);
+    }
+    .patients-content {
+      flex: 1;
+      min-width: 0;
+      padding: 32px 0 32px 24px;
+      border-left: 1px solid #e0e8ed;
+    }
+    .patients-content h2 {
+      font-size: 24px;
+      color: var(--nhs-dark-blue);
+      font-weight: 700;
+      margin: 40px 0 14px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid var(--nhs-light-blue);
+      scroll-margin-top: 150px;
+    }
+    .patients-content h2:first-of-type { margin-top: 0; }
+    .patients-content h3 { font-size: 20px; color: var(--nhs-dark-blue); font-weight: 700; margin: 24px 0 10px; }
+    .patients-content h4 { font-size: 17px; font-weight: 700; margin: 20px 0 8px; }
+    .patients-content p { margin-bottom: 16px; line-height: 1.65; }
+    .patients-content ul, .patients-content ol { margin: 0 0 16px 24px; }
+    .patients-content li { margin-bottom: 6px; }
+    @media (max-width: 768px) {
+      .patients-sidenav { display: none; }
+      .patients-layout { padding: 0 16px 48px; }
+      .patients-content { padding: 24px 0; border-left: none; }
+    }
+  </style>
+</head>
+<body>
+
+<div id="nhs-header-placeholder" data-page="patients.html"></div>
+
+<div class="nhs-page-header">
+  <div class="nhs-page-header__inner">
+    <h1>Information for Patients</h1>
+  </div>
+</div>
+
+<div class="patients-layout">
+
+  <nav class="patients-sidenav">
+    <div class="patients-sidenav__label">On this page</div>
+    <a href="#about">About Molar Pregnancy</a>
+    <a href="#followup">Follow-Up</a>
+    <a href="#treatment">Further Treatment</a>
+    <a href="#counselling">Counselling</a>
+    <a href="#links">Helpful Links</a>
+    <a href="#faqs">FAQs</a>
+  </nav>
+
+  <main class="patients-content">
+
+    <div class="nhs-callout">
+      <h4>When we are open</h4>
+      <p><strong>Monday to Friday, 9:00am – 4:00pm.</strong> Please call or email us if you have any questions or need advice. We are closed on public holidays and cannot receive samples on those days.</p>
+    </div>
+
+    <!-- ABOUT -->
+    <h2 id="about">About Molar Pregnancy</h2>
+
+    <p>A molar pregnancy is a rare condition that happens when something goes wrong at the very start of a pregnancy. Instead of a baby growing, abnormal cells from the placenta (the organ that normally feeds a growing baby) grow too quickly and take over.</p>
+
+    <p>This is also called <strong>GTD (gestational trophoblastic disease)</strong>. Each year in Scotland, around <strong>150 people</strong> are diagnosed with this condition. We know this can feel frightening and confusing — and we want you to know that you are not alone. Most of the time, after the abnormal tissue is removed, the condition gets better on its own with regular check-ups.</p>
+
+    <div class="nhs-callout nhs-callout--green">
+      <h4>This is not a cancer diagnosis</h4>
+      <p>If your hormone levels return to normal after treatment, you do not have cancer. For most people, that is exactly what happens. Only about <strong>1 in 100</strong> people with a partial molar pregnancy, and about <strong>15 in 100</strong> with a complete molar pregnancy, need any extra treatment.</p>
+    </div>
+
+    <h3>What is a Molar Pregnancy?</h3>
+    <p>A molar pregnancy happens at the moment of conception — when a sperm meets an egg. Something goes wrong with the chromosomes (the information inside cells that tells the body how to grow). Because of this, a baby cannot develop, but the placenta tissue keeps growing in an abnormal way. Molar pregnancies are quite rare — they happen in roughly <strong>1 in every 600 pregnancies</strong> in the UK.</p>
+
+    <div class="nhs-image-block">
+      <figure>
+        <img src="images/image3.png" alt="Complete molar pregnancy diagram" style="max-width:640px;">
+      </figure>
+      <figure style="margin-top:8px;">
+        <img src="images/image4.png" alt="Partial molar pregnancy diagram" style="max-width:640px;">
+      </figure>
+      <figure style="margin-top:8px;">
+        <img src="images/image5.png" alt="Molar pregnancy comparison diagram" style="max-width:640px;">
+        <figcaption>Fig 1. The two main types of molar pregnancy and how they differ.</figcaption>
+      </figure>
+    </div>
+
+    <h3>Complete Molar Pregnancy</h3>
+    <p>In a <strong>complete molar pregnancy</strong>, the egg has no genetic material from the mother. One or two sperm fertilise the egg, but only the father's genetic information is present. Because of this, no baby develops at all. Instead, abnormal placenta tissue grows quickly and forms lots of fluid-filled sacs called cysts.</p>
+
+    <h3>Partial Molar Pregnancy</h3>
+    <p>In a <strong>partial molar pregnancy</strong>, two sperm fertilise the egg at the same time instead of just one. This means there are three sets of chromosomes instead of the usual two. A very early baby (called a fetus) may start to form, but because the chromosomes are not balanced correctly, it cannot grow into a healthy baby.</p>
+
+    <h3>Biparental Androgenetic Mosaic Pregnancy</h3>
+    <p>In very rare cases, some cells show normal features while others show features of a complete molar pregnancy. This is called a <strong>biparental androgenetic mosaic pregnancy</strong>. It is a newly recognised and very unusual condition, and there is still a lot to learn about it.</p>
+
+    <h3>What causes a molar pregnancy?</h3>
+    <p>The honest answer is that we do not fully know yet. Some studies have looked at diet or family history, but no clear cause has been found. What we do know is that molar pregnancies happen more often at certain ages:</p>
+    <ul>
+      <li>Girls under 15 have about <strong>1.5 times the usual risk</strong></li>
+      <li>Women over 45 have a risk that is <strong>20 to 50 times higher</strong> than average</li>
+      <li>If you have had a molar pregnancy before, there is roughly a <strong>1 in 100 chance</strong> of it happening again</li>
+    </ul>
+    <p>It is important to know that a molar pregnancy is not caused by anything you did or did not do.</p>
+
+    <h3>What symptoms might I notice?</h3>
+    <p>Symptoms most often appear in the second or third month of pregnancy. The two most common signs are <strong>vaginal bleeding</strong> and <strong>feeling very sick (nausea or vomiting)</strong>, often more than in a usual pregnancy.</p>
+
+    <h3>How is it diagnosed and treated?</h3>
+    <p>A molar pregnancy is often first spotted during an ultrasound scan that looks unusual. The main treatment is a small operation called an <strong>evacuation</strong> (sometimes called a D&amp;C), where the tissue is gently removed from the womb using a suction tube. In some cases, medication (tablets) may be used instead.</p>
+    <p>After the tissue is removed, some of it is sent to a laboratory to be looked at under a microscope. If a molar pregnancy is confirmed or suspected, samples are sent to our specialist team for a closer look. We share the results with your local doctor. Sometimes a molar pregnancy is only discovered after a miscarriage, when tissue is tested and the results come back.</p>
+
+    <div class="nhs-image-row">
+      <figure>
+        <img src="images/image6.png" alt="Abnormal cyst mass in molar pregnancy">
+        <figcaption>Abnormal cysts seen in a molar pregnancy.</figcaption>
+      </figure>
+      <figure>
+        <img src="images/image7.jpeg" alt="Ultrasound scan of molar pregnancy">
+        <figcaption>An ultrasound scan showing a molar pregnancy.</figcaption>
+      </figure>
+    </div>
+
+    <div class="nhs-callout nhs-callout--blue" style="border-top-color: var(--nhs-mid-blue); background: #eef4fb;">
+      <h4>🎬 Falling — Patient stories about molar pregnancy</h4>
+      <p>This short film follows three women sharing their experiences of a molar pregnancy. It shows the shock and confusion that often comes with the diagnosis, the feeling of being "in limbo", and the exhaustion of regular monitoring. It ends on a note of hope — almost all patients in the UK are cured.</p>
+      <p><a href="https://www.youtube.com/watch?v=sXz-PDQPhbg&t=49s" target="_blank" style="color:var(--nhs-blue); font-weight:700;">▶ Watch on YouTube →</a></p>
+      <p style="font-size:13px; opacity:0.75; margin-bottom:0;">Based on research by Dr Emily Ross. More information: <a href="https://stdc.sites.sheffield.ac.uk/patients" target="_blank" style="color:var(--nhs-blue);">Sheffield Trophoblastic Disease Centre</a></p>
+    </div>
+
+    <!-- FOLLOW-UP -->
+    <h2 id="followup">Follow-Up After a Molar Pregnancy</h2>
+
+    <p>If you have been registered with us, you should have already received an information pack explaining what happens next — it also includes a sample kit for collecting blood and urine. We call every new patient to talk through the diagnosis and answer any questions. Before we call, we ask you to fill in a short health questionnaire so we know what is most important to you.</p>
+
+    <h3>Your Sample Kit</h3>
+    <p>Your kit contains three things:</p>
+    <ul>
+      <li>A blood bottle (yellow top)</li>
+      <li>A urine bottle (white top)</li>
+      <li>A pre-addressed padded envelope to post your samples back to us</li>
+    </ul>
+
+    <div class="nhs-image-row">
+      <figure>
+        <img src="images/image8.jpeg" alt="Envelope for test kit">
+        <figcaption>The envelope that comes with your test kit.</figcaption>
+      </figure>
+      <figure>
+        <img src="images/image9.jpeg" alt="Sample test kit contents">
+        <figcaption>What is inside your test kit.</figcaption>
+      </figure>
+    </div>
+
+    <h3>How to use your kit</h3>
+    <ol>
+      <li>Book an appointment at your GP surgery or local early pregnancy clinic to have your blood taken.</li>
+      <li>On the morning of your appointment, collect your first urine of the day in the white-topped bottle.</li>
+      <li>Bring both samples with you to your appointment.</li>
+      <li>Write the date on each sample, put them in the pre-paid envelope, and post it back to us.</li>
+    </ol>
+
+    <div class="nhs-callout nhs-callout--yellow">
+      <h4>Important</h4>
+      <p>If the date is not written on your samples, they may not be accepted and you will need to repeat the test. If you have trouble getting your blood taken, please ask the doctor or nurse to call us on <strong>01382 632748</strong>.</p>
+    </div>
+
+    <p>Results are usually ready within <strong>3 working days</strong> of us receiving your samples. We will contact you with your results — but if you have not heard from us, feel free to call or email.</p>
+
+    <p>Normal hCG levels: <strong>blood: 0–4 IU/L</strong> &nbsp;|&nbsp; <strong>urine: 0–24 IU/L</strong></p>
+
+    <h3>How often will I need to send samples?</h3>
+    <p>At first, you send a blood and urine sample <strong>every two weeks</strong>. Once your result is normal, you switch to every four weeks.</p>
+
+    <table class="nhs-table">
+      <thead>
+        <tr><th>Type of molar pregnancy</th><th>How long is follow-up?</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Partial molar pregnancy</strong></td>
+          <td>Once your blood hCG is normal, you need one more normal result four weeks later. After that, and once the tissue review is complete, you will be discharged.</td>
+        </tr>
+        <tr>
+          <td><strong>Complete molar pregnancy — hCG normal within 65 days</strong></td>
+          <td>One more normal result is needed four weeks later. After that, and once the tissue review is complete, you will be discharged.</td>
+        </tr>
+        <tr>
+          <td><strong>Complete molar pregnancy — hCG not normal within 65 days</strong></td>
+          <td>Follow-up continues for a further <strong>6 months</strong> from the date of your first normal result.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="nhs-callout nhs-callout--yellow">
+      <h4>Contraception during follow-up</h4>
+      <p>It is best to avoid getting pregnant while you are being monitored. You can use any contraception you like, including the contraceptive pill. It is best to avoid using a coil (IUD/IUCD) until your hCG levels have returned to normal.</p>
+    </div>
+
+    <div class="nhs-callout nhs-callout--green">
+      <h4>Trying for a baby after follow-up</h4>
+      <p>Once you have been discharged from follow-up, you can try for a baby if you wish. We know this can feel like a worrying time. We recommend an early reassurance scan in your next pregnancy, which your local early pregnancy unit can arrange. If your molar pregnancy did not need any extra treatment, we will not need to monitor you during or after a future pregnancy.</p>
+    </div>
+
+    <!-- FURTHER TREATMENT -->
+    <h2 id="treatment">Further Treatment After a Molar Pregnancy</h2>
+    <p>Most people do not need any further treatment after their molar pregnancy is removed. However, around <strong>15 in every 100 people</strong> with a complete molar pregnancy, and about <strong>1 in every 100</strong> with a partial molar pregnancy, will need extra treatment.</p>
+    <p>This may be needed if your hCG levels stop falling, stay at the same level, or start to rise again — or if you have very heavy bleeding. Your local team and our team in Dundee will discuss the best options with you.</p>
+
+    <div class="nhs-callout nhs-callout--green">
+      <h4>If treatment is needed, the cure rate is 100%</h4>
+      <p>If you need chemotherapy, it is very effective. Treatment is chosen carefully to work as well as possible while keeping side effects as low as possible. If you need to be admitted to Charing Cross Hospital, NHS Scotland will cover the cost of travel and accommodation for you and one person with you.</p>
+    </div>
+
+    <h3>Chemotherapy treatment</h3>
+    <p>Most people who need treatment are in the <strong>low-risk group</strong>. The most common treatment is a medicine called <strong>Methotrexate</strong>, given alongside <strong>Folinic Acid</strong> (which helps reduce side effects). This treatment does <em>not</em> cause hair loss and does not usually cause sickness.</p>
+    <p>Treatment is given in cycles:</p>
+    <ol>
+      <li>Methotrexate injections on days 1, 3, 5 and 7</li>
+      <li>Folinic Acid tablets on days 2, 4, 6 and 8</li>
+      <li>A rest week with no treatment</li>
+      <li>The next cycle begins if needed</li>
+    </ol>
+    <p>Possible side effects include sore eyes, a sore mouth, mild tummy discomfort and tiredness. Treatment usually lasts <strong>3 to 5 months</strong> in total.</p>
+
+    <div class="nhs-image-row">
+      <figure>
+        <img src="images/image10.png" alt="Normal hCG trend after molar pregnancy" style="max-width:340px;">
+        <figcaption>Fig 5. What a normal pattern of falling hCG levels looks like after a molar pregnancy.</figcaption>
+      </figure>
+    </div>
+
+    <h3>Check-ups after chemotherapy</h3>
+    <p>After finishing chemotherapy, you will come back for a review appointment six weeks later. All patients continue to have their hCG levels checked on a regular basis for a long time afterwards, to make sure everything stays normal.</p>
+    <table class="nhs-table">
+      <thead><tr><th>Time period</th><th>How often samples are needed</th></tr></thead>
+      <tbody>
+        <tr><td>Year 1 (first 26 weeks)</td><td>Blood and urine every two weeks</td></tr>
+        <tr><td>Year 1 (weeks 27–52)</td><td>Urine every two weeks</td></tr>
+        <tr><td>Year 2</td><td>Urine once a month</td></tr>
+        <tr><td>Year 3</td><td>Urine every 2 months</td></tr>
+        <tr><td>Year 4</td><td>Urine every 3 months</td></tr>
+        <tr><td>Year 5</td><td>Urine every 4 months</td></tr>
+        <tr><td>Year 6 onwards</td><td>Urine every 6 months (ongoing)</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Can I have a baby after chemotherapy?</h3>
+    <p>Yes — most people keep their fertility after treatment. Periods usually come back within 2 to 6 months. There is no increased risk of problems with future babies. You should wait <strong>12 months</strong> after finishing treatment before trying to conceive. Of those who want to have a baby after treatment, <strong>83%</strong> go on to have at least one live birth.</p>
+
+    <h3>Other rare related conditions</h3>
+    <h4>Choriocarcinoma</h4>
+    <p>This is a very rare cancer that develops from placenta tissue. Only 10 to 20 cases happen in the UK each year. It is treated at Charing Cross Hospital, usually with a type of chemotherapy called EMA-CO. The <strong>cure rate is over 95%</strong>.</p>
+
+    <h4>Placental Site Trophoblastic Tumour (PSTT)</h4>
+    <p>This is an extremely rare condition — fewer than 5 cases per year in the UK. It can appear months or even years after a pregnancy. All patients are cared for at Charing Cross Hospital. It is <strong>highly curable</strong>, though treatment can sometimes be more complex.</p>
+
+    <!-- COUNSELLING -->
+    <h2 id="counselling">Counselling Support</h2>
+    <p>We offer free, private, and non-judgemental counselling to anyone affected by a molar pregnancy or a related condition. Whether you are dealing with the emotional side of the diagnosis, the stress of monitoring, or thinking about future pregnancies — we are here to help. Support is tailored to what feels right for you, and you can reconnect with us whenever you need to.</p>
+
+    <div class="nhs-callout">
+      <h4>Counselling is free of charge</h4>
+      <p>There is no set number of sessions — it depends entirely on what you need. If more specialist or long-term support is required, we will help you find the right person.</p>
+    </div>
+
+    <h3>What we can help with</h3>
+    <ul>
+      <li>Emotional and mental health support</li>
+      <li>A safe space to talk and be listened to</li>
+      <li>Practical information and guidance</li>
+      <li>Resources and helpful tools</li>
+      <li>Coping strategies and ways to adjust</li>
+      <li>Ongoing support whenever you need it</li>
+    </ul>
+    <p>To access counselling, email us at: <a href="mailto:tay.molecouns@nhs.scot" style="color:var(--nhs-blue)">tay.molecouns@nhs.scot</a></p>
+    <p>Counselling phone number: 07483935394</p>
+    <p>Please note that texting is preferred due to staff time.</p>
+
+    <!-- HELPFUL LINKS -->
+    <h2 id="links">Helpful Websites and Resources</h2>
+    <div class="nhs-card-grid" style="grid-template-columns: 1fr 1fr 1fr;">
+      <a href="https://www.nhsinform.scot/illnesses-and-conditions/pregnancy-and-childbirth/losing-a-baby/molar-pregnancy/" target="_blank" class="nhs-card">
+        <h3>NHS Inform Scotland</h3>
+        <p>Clear, reliable information about molar pregnancy — diagnosis, treatment and follow-up.</p>
+        <span class="nhs-card__arrow">Visit →</span>
+      </a>
+      <a href="https://www.nhs.uk/conditions/molar-pregnancy/" target="_blank" class="nhs-card">
+        <h3>NHS.uk</h3>
+        <p>Patient information about molar pregnancy from NHS England.</p>
+        <span class="nhs-card__arrow">Visit →</span>
+      </a>
+      <a href="https://www.macmillan.org.uk/" target="_blank" class="nhs-card">
+        <h3>Macmillan Cancer Support</h3>
+        <p>Practical, emotional and financial support. Support line: 0808 808 0000.</p>
+        <span class="nhs-card__arrow">Visit →</span>
+      </a>
+      <a href="https://mymolarpregnancy.com/" target="_blank" class="nhs-card">
+        <h3>MyMolarPregnancy.com</h3>
+        <p>Clear information, personal stories and reassurance — written in plain, everyday language.</p>
+        <span class="nhs-card__arrow">Visit →</span>
+      </a>
+      <a href="https://molarpregnancy.co.uk/" target="_blank" class="nhs-card">
+        <h3>The Molar Pregnancy Website</h3>
+        <p>A patient-created support resource, first launched in 2007.</p>
+        <span class="nhs-card__arrow">Visit →</span>
+      </a>
+      <a href="https://www.miscarriageassociation.org.uk/" target="_blank" class="nhs-card">
+        <h3>Miscarriage Association</h3>
+        <p>Telephone support for you and your family: 01924 200799.</p>
+        <span class="nhs-card__arrow">Visit →</span>
+      </a>
+      <a href="https://stdc.sites.sheffield.ac.uk/" target="_blank" class="nhs-card">
+        <h3>Sheffield Trophoblastic Disease Centre</h3>
+        <p>One of the UK's specialist centres for managing GTD conditions.</p>
+        <span class="nhs-card__arrow">Visit →</span>
+      </a>
+      <a href="https://www.isstd.org/" target="_blank" class="nhs-card">
+        <h3>ISSTD</h3>
+        <p>The International Society for the Study of Trophoblastic Diseases.</p>
+        <span class="nhs-card__arrow">Visit →</span>
+      </a>
+      <a href="https://www.cancerresearchuk.org/about-cancer/gestational-trophoblastic-disease-gtd/molar-pregnancy" target="_blank" class="nhs-card">
+        <h3>Cancer Research UK</h3>
+        <p>Reliable information about molar pregnancy, and a way to connect with others in the same situation.</p>
+        <span class="nhs-card__arrow">Visit →</span>
+      </a>
+    </div>
+
+    <!-- FAQS -->
+    <h2 id="faqs">Frequently Asked Questions</h2>
+    <div class="nhs-faq">
+
+      <details>
+        <summary>1. Do I have cancer?</summary>
+        <div class="faq-answer">
+          <p>If you have had a molar pregnancy that has settled without needing chemotherapy, then you do not have cancer. A molar pregnancy itself is not cancer.</p>
+          <p>In a small number of cases — around 15% of complete moles and 1% of partial moles — the tissue can develop into something called an invasive mole or choriocarcinoma, which is a form of cancer. But this is rare, and it is one of the most treatable cancers there is, with a cure rate of almost 100%. That is exactly why we monitor everyone so carefully — so that if anything does start to change, we can catch it very early and treat it straight away.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>2. Why is it so important to get the diagnosis right?</summary>
+        <div class="faq-answer">
+          <p>Getting the right diagnosis matters because, in a small number of cases, molar tissue can keep growing after it has been removed. This is called persistent trophoblastic disease (PTD). It can be treated very successfully — but it does need to be caught early.</p>
+          <p>After a complete molar pregnancy, about 1 in 10 people need further treatment. After a partial molar, the number is about 1 in 100. Because we cannot tell from the start who will need extra treatment, everyone is monitored carefully through the follow-up programme.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>3. How does the monitoring programme work?</summary>
+        <div class="faq-answer">
+          <p>In the UK, everyone with a molar pregnancy is enrolled in a monitoring programme that tracks a hormone called <strong>hCG</strong>. Your doctor will register you with one of three specialist centres:</p>
+          <ul>
+            <li>Ninewells Hospital, Dundee</li>
+            <li>Charing Cross Hospital, London</li>
+            <li>Weston Park Hospital, Sheffield</li>
+          </ul>
+          <p>You will send regular blood and urine samples every two weeks. If your hCG levels are falling, that is a good sign that the molar tissue is settling on its own.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>4. What is hCG and why does it matter?</summary>
+        <div class="faq-answer">
+          <p>hCG stands for <strong>human Chorionic Gonadotrophin</strong>. It is the hormone that pregnancy tests detect. After a molar pregnancy, measuring hCG is the best way to check whether any abnormal cells are still present. If the level rises or stops falling after the tissue has been removed, it may mean further treatment is needed.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>5. How long will follow-up last?</summary>
+        <div class="faq-answer">
+          <p>It depends on the type of molar pregnancy you had:</p>
+          <ul>
+            <li><strong>Partial molar pregnancy:</strong> Follow-up may be as short as two to three months from the date of your operation, once your hCG returns to normal and a confirmatory sample is taken four weeks later.</li>
+            <li><strong>Complete molar pregnancy (hCG normal within 65 days):</strong> One further normal sample four weeks later, then you will be discharged.</li>
+            <li><strong>Complete molar pregnancy (hCG not normal within 65 days):</strong> Follow-up continues for a further six months from the date of your first normal result.</li>
+          </ul>
+          <p>If you need chemotherapy, you will be followed up for much longer — see the Further Treatment section for details.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>6. Who decides if further treatment is needed?</summary>
+        <div class="faq-answer">
+          <p>The decision is based almost entirely on the pattern of your hCG levels after the operation. If hCG starts to rise again, or stays at the same level for too long without falling, further treatment is usually recommended. Your local team and our team in Dundee will discuss the options with you.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>7. What are the options if further treatment is needed?</summary>
+        <div class="faq-answer">
+          <p>There are three main options your team may discuss with you:</p>
+          <ul>
+            <li><strong>Chemotherapy (the most common):</strong> Very effective, preserves fertility, and has cure rates over 99%.</li>
+            <li><strong>A second evacuation:</strong> May help a small number of people avoid chemotherapy — only considered in certain situations.</li>
+            <li><strong>Hysterectomy (very rarely used):</strong> Only considered for people who have completed their family. Even after this, some people still need chemotherapy.</li>
+          </ul>
+        </div>
+      </details>
+
+      <details>
+        <summary>8. Do I really have to wait before trying for a baby?</summary>
+        <div class="faq-answer">
+          <p>Yes — while you are still in follow-up, it is important to avoid getting pregnant. This is because pregnancy produces hCG, which would make it very difficult for us to tell whether any rise in levels is from a new pregnancy or from molar tissue growing again.</p>
+          <p>Once you have been discharged from follow-up, you can try for a baby. If you needed chemotherapy, we ask you to wait 12 months after finishing treatment. We know that waiting can feel very hard, but it is to make sure you are safe.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>9. Will I be able to get pregnant again?</summary>
+        <div class="faq-answer">
+          <p>Yes, you should be able to. A molar pregnancy does not affect your fertility, and chemotherapy — if you needed it — does not usually affect it either. Periods typically return within 2 to 6 months after treatment. There is no increased risk of problems with future babies. Of those who want to conceive after treatment, 83% go on to have at least one live birth.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>10. Will I have another molar pregnancy?</summary>
+        <div class="faq-answer">
+          <p>It is possible, but very unlikely. The general risk of a molar pregnancy is around 1 in 600. If you have had one before, the chance of it happening again is around <strong>1 in 100</strong>. If you have had two molar pregnancies, the chance of a third rises to around 1 in 7.5 — which is why we would monitor any future pregnancies carefully. But for most people, the next pregnancy is perfectly normal.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>11. Am I more likely to have a miscarriage next time?</summary>
+        <div class="faq-answer">
+          <p>We do not know for certain, but the answer is probably not. Most people who have had a molar pregnancy go on to have healthy pregnancies. We recommend an early reassurance scan in your next pregnancy, which your local early pregnancy unit can arrange.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>12. If I needed chemotherapy, will it affect a future baby?</summary>
+        <div class="faq-answer">
+          <p>No. Once you have waited the recommended 12 months after finishing chemotherapy, there is no increased risk of problems with any future baby. The chemotherapy does not affect the health of babies born afterwards.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>13. Can I use contraception during follow-up?</summary>
+        <div class="faq-answer">
+          <p>Yes. You can use any contraception you like during follow-up, including the contraceptive pill. A coil (IUD/IUCD) is best avoided until your hCG levels return to normal. Condoms used with spermicide are also a reliable option. Your GP or a sexual health clinic can give you further advice.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>14. Can I do anything to reduce the risk of another molar pregnancy?</summary>
+        <div class="faq-answer">
+          <p>Not as far as we know. A molar pregnancy happens by chance at the moment of conception — it is not something you have any control over, and there is nothing you could have done differently.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>15. I feel different since my diagnosis. Is that normal?</summary>
+        <div class="faq-answer">
+          <p>Yes, this is very common. A molar pregnancy can bring up a lot of confusing and difficult feelings — grief, shock, anxiety, or a sense of not knowing how to feel. There is nothing wrong with the molar tissue itself in terms of being "abnormal" compared to you — trophoblastic cells are found in all pregnancies. A mole is different only because the growth was not switched off at the right time.</p>
+          <p>However you are feeling, it is valid. If you would like to talk to someone, our counselling service is here for you — see the Counselling section above.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>16. Was I ever really pregnant? Should I be grieving?</summary>
+        <div class="faq-answer">
+          <p>You had the beginnings of a pregnancy which, sadly, could never develop or survive. Many people feel a real sense of loss — for the baby that might have been, for the pregnancy they had hoped for, and for the plans they had made. Others find it helps to think of it differently. There are no right or wrong feelings — only what is true for you.</p>
+          <p>If you are struggling, please do reach out to us or to one of the support organisations listed in the Helpful Links section.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>17. Can my partner be affected by my molar pregnancy?</summary>
+        <div class="faq-answer">
+          <p>No. A molar pregnancy carries no risk to your partner. It cannot be passed on.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>18. How common are molar pregnancies?</summary>
+        <div class="faq-answer">
+          <p>In England and Wales, there are roughly 1,784 molar pregnancies registered each year — about 1 in every 500 births. Because they are so rare, your local maternity unit may only see one or two cases a year, which is exactly why specialist national centres like ours are so important.</p>
+        </div>
+      </details>
+
+    </div><!-- /nhs-faq -->
+
+</div><!-- /patients-layout -->
+
+<div id="nhs-footer-placeholder"></div>
+<script src="components.js"></script>
+<script>
+  (function() {
+    var sections = ['about','followup','treatment','counselling','links','faqs','contact-section'];
+    var navLinks = {};
+    sections.forEach(function(id) {
+      navLinks[id] = document.querySelector('.patients-sidenav a[href="#' + id + '"]');
+    });
+    function onScroll() {
+      var offset = 150;
+      var current = sections[0];
+      sections.forEach(function(id) {
+        var el = document.getElementById(id);
+        if (el && el.getBoundingClientRect().top <= offset) current = id;
+      });
+      sections.forEach(function(id) {
+        if (navLinks[id]) navLinks[id].classList.remove('active');
+      });
+      if (navLinks[current]) navLinks[current].classList.add('active');
+    }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  })();
+</script>
+</body>
+</html>
